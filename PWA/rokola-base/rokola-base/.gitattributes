@@ -1,0 +1,2 @@
+# Saltos de línea LF en el repositorio para todos (Windows, Mac, Linux): evita conflictos falsos entre ramas
+* text=auto eol=lf

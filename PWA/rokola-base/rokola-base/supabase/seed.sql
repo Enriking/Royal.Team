@@ -1,0 +1,4 @@
+-- Datos de ejemplo para desarrollo.
+-- Se cargan después de las migraciones con `npx supabase db reset` (solo en la base local).
+-- Ejemplo, cuando exista la tabla:
+-- insert into canciones (titulo, artista) values ('Bamboleo', 'Gipsy Kings');

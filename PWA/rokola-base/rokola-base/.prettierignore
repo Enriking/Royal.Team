@@ -1,0 +1,6 @@
+package-lock.json
+public
+supabase
+src/lib/database.types.ts
+# Tabla de tokens alineada a mano
+src/styles/index.css
