@@ -1,0 +1,14 @@
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import { RouterProvider } from 'react-router'
+import '@fontsource-variable/inter'
+import '@/styles/index.css'
+import { router } from '@/app/router'
+import { Avisos } from '@/components/ui'
+
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
+    <RouterProvider router={router} />
+    <Avisos />
+  </StrictMode>,
+)
