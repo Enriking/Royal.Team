@@ -1,7 +1,7 @@
 # Revisa cada rama y cada pull request: lint, tipos, pruebas, formato y build.
 name: CI
 #Establece el directorio a ejecutar de manera directa sin mover todo el proyecto a otra carpeta
-defaults.run.working-directory: PWA/rokola-base/rokola-base
+defaults.run.working-directory: rokola-base
 
 on:
   push:
@@ -20,4 +20,3 @@ jobs:
       - run: npm ci
       - run: npm run check
       - run: npm run build
-
