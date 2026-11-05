@@ -10,6 +10,7 @@ import {
   validarPedido,
   type DatosPedido,
 } from './reglas'
+import { enviarSolicitudASupabase } from './supabaseSolicitudes'
 
 const deLaNoche = (noche: string) => almacen.filas('solicitudes').filter((s) => s.noche === noche)
 
@@ -66,6 +67,8 @@ export async function pedirCancion(datos: DatosPedido): Promise<Solicitud> {
     puntaje: null,
   }
   await almacen.guardar('solicitudes', [solicitud])
+  // Experimental: también se registra en Supabase (no bloquea ni cancela el pedido si falla).
+  await enviarSolicitudASupabase(solicitud)
   return solicitud
 }
 
